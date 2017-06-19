@@ -12,6 +12,13 @@ In general we adopt [this](https://medium.com/@alexmngn/how-to-better-organize-y
 * Upper `CamelCase` for Componenets and Collections only
 * Lower `camelCAse` for everything else
 
+# Usage restrictions
+
+* `/Parent/Child/GrandChild`
+* Using siblings, parents, or grandparents is OK
+* Using cousins / uncles is forbidden
+* Only top level components, scenes, services, may be used elsewhere
+
 # Example
 
     /src
@@ -63,6 +70,40 @@ In general we adopt [this](https://medium.com/@alexmngn/how-to-better-organize-y
           /reducer.js
       index.js
       store.js
+
+# Usage Example
+
+    src/
+      components/
+        /Button
+        /Notifications
+          /ButtonDismiss
+      scenes/
+        /Home
+        /Sign
+          /components
+            /FormField
+          /scenes
+            /Login
+            /Register
+      /services
+        /api
+        /geolocation
+          /getIP
+        /session
+        /users
+          /getToken
+
+* Allowed
+  - `/components/Notifications/ButtonDismiss` -> `../Button`
+    - Parents are OK
+  - `/services/geolocation/getIP` -> `/services/api`
+    - Top level services are "global"
+* Forbidden
+  - `/scenes/Sign/scenes/Register` -> `/components/Button/ButtonDismiss` 
+    - Only top level components are "global"
+  - `/services/users/getToken` -> `/services/geolocation/getIP`
+    - Only top level services are "global"
 
 # OUT OF DATE
 
