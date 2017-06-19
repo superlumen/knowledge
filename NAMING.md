@@ -18,6 +18,7 @@ In general we adopt [this](https://medium.com/@alexmngn/how-to-better-organize-y
 * Using siblings, parents, or grandparents is OK
 * Using cousins / uncles is forbidden
 * Only top level components, scenes, services, may be used elsewhere
+* NOTE `/shared/foo` and `/bar` are considered to be at the same level
 
 # Example
 
