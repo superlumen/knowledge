@@ -24,8 +24,10 @@ In general we adopt [this](https://medium.com/@alexmngn/how-to-better-organize-y
               /locales
               /specs 
               /index.js
+              /ButtonDismiss.component.js
               /styles.scss
           /index.js
+          /Notifications.component.js
           /styles.scss
       /scenes
         /Home 
@@ -34,6 +36,7 @@ In general we adopt [this](https://medium.com/@alexmngn/how-to-better-organize-y
           /services
             /processData
           /index.js
+          /Home.scene.js
           /styles.scss
         /Sign 
           /components 
@@ -44,6 +47,7 @@ In general we adopt [this](https://medium.com/@alexmngn/how-to-better-organize-y
               /locales
               /specs
               /index.js
+              /Register.scene.js
               /styles.scss
       /services
         /api
@@ -51,12 +55,13 @@ In general we adopt [this](https://medium.com/@alexmngn/how-to-better-organize-y
         /session
           /actions.js
           /index.js
+          /session.service.js
           /reducer.js
         /users
           /actions.js
           /api.js
           /reducer.js
-      index.js 
+      index.js
       store.js
 
 # OUT OF DATE
