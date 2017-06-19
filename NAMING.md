@@ -1,3 +1,68 @@
+Naming
+---
+
+> There are only two hard things in Computer Science: cache invalidation and naming things.
+>
+> -- Phil Karlton [[1](https://martinfowler.com/bliki/TwoHardThings.html)]
+
+In general we adopt [this](https://medium.com/@alexmngn/how-to-better-organize-your-react-applications-2fd3ea1920f1) strategy with some tweaks.
+
+* `services/foo/index.js` exports everything from `services/foo/foo.service.js`
+  - The code lives in `foo.service.js`
+* Upper `CamelCase` for Componenets and Collections only
+* Lower `camelCAse` for everything else
+
+# Example
+
+    /src
+      /components 
+        /Button 
+        /Notifications
+          /components
+            /ButtonDismiss  
+              /images
+              /locales
+              /specs 
+              /index.js
+              /styles.scss
+          /index.js
+          /styles.scss
+      /scenes
+        /Home 
+          /components 
+            /ButtonLike
+          /services
+            /processData
+          /index.js
+          /styles.scss
+        /Sign 
+          /components 
+            /FormField
+          /scenes
+            /Login
+            /Register 
+              /locales
+              /specs
+              /index.js
+              /styles.scss
+      /services
+        /api
+        /geolocation
+        /session
+          /actions.js
+          /index.js
+          /reducer.js
+        /users
+          /actions.js
+          /api.js
+          /reducer.js
+      index.js 
+      store.js
+
+# OUT OF DATE
+
+The rest of this is out of date and probably doesn't apply any more.
+
 # Collections
 
 * Collections are plural, like `Items`, `Products`, `Stories`
