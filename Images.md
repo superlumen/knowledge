@@ -22,6 +22,12 @@ The free tier offers 20GB of bandwidth per month and unlimited storage on the co
 * Free tier with 25GB of bandwidth
 * Based on optimisation of images stored elsewhere
 
+## [UploadCare](https://uploadcare.com/pricing/)
+
+* Free up to 100 images / month, 1GB bandwidth
+* Paid from $50/month
+* Includes uploaders and other stuff
+
 ## [imgpush](https://github.com/hauxir/imgpush/)
 
 * Open source, self hosted, cloudinary alternative
